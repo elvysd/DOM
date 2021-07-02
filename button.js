@@ -11,26 +11,30 @@ const btn = document.querySelector("#btn");
 btn.onclick = alertFunction;
 console.log(3);
 
-for (let i = 0; i < 64; i++) {
+for (let i = 0; i <= 127; i++) {
   console.log(i);
   // select id
   const container = document.querySelector('#container');
   // add element div 
   const content = document.createElement('div');
+  const content2 = document.createElement('div');
   // adds class "flex-container"
-  if (i % 2 == 0) {
-    content.classList.add('flex-container' + 1);
+  if (i % 16 == 0) {
+    content.classList.add('break');
+    content2.classList.add('flex-container');
     // adds text content
-    content.textContent = 'i' + i;
+    content2.textContent = "i" + i;
+
     // adds actual content
     container.appendChild(content);
+    container.appendChild(content2);
+
   }
   else {
     content.classList.add('flex-container');
     // adds text content
-    content.textContent = 'i' + i;
+    content.textContent = "i" + i;
     // adds actual content
     container.appendChild(content);
   }
 }
-

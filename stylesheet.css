@@ -1,1 +1,13 @@
-
+ #container {
+    display: flex;
+    margin: 10px;
+    padding: 15px;
+    background-color: aqua;
+}
+#container2 {
+    display: flex;
+    margin: 10px;
+    padding: 15px;
+    background-color: aqua;
+    flex-direction:column;
+}

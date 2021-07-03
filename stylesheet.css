@@ -3,18 +3,34 @@
     white-space: nowrap;
     flex-wrap: nowrap;
     margin: 0 auto;
-    padding: 25px;
-    width: 50px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
     text-align: center;
     justify-content: center;
+    background: white;
+    transition-duration: 60s;
+    border-width: 5px;
+    border-style: solid;
+
+    width: auto;
 }
 .flex-container:hover {
     display: inline;
-    margin: 0px;
-    padding: 25px;
-    background-color: whitesmoke;
-    width: 50px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    text-align: center;
     justify-content: center;
+    background: black;
+    transition-duration: 1s;
+    border-width: 5px;
+    border-style: solid;
 }
 .break {
     flex-basis: 100%;
@@ -23,10 +39,11 @@
 #container {
     text-align: center;
     border:mintcream;
-    border-width: 5px;
+    border-width: 5%;
     border-style: solid;
     padding: 5%;
-    padding-left: 0;
+
+
 }
 body {
     background-color: maroon;

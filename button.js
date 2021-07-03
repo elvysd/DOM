@@ -9,32 +9,38 @@ function alertFunction() {
 
 const btn = document.querySelector("#btn");
 btn.onclick = alertFunction;
-console.log(3);
 
-for (let i = 0; i <= 127; i++) {
-  console.log(i);
-  // select id
-  const container = document.querySelector('#container');
-  // add element div 
-  const content = document.createElement('div');
-  const content2 = document.createElement('div');
-  // adds class "flex-container"
-  if (i % 16 == 0) {
-    content.classList.add('break');
-    content2.classList.add('flex-container');
-    // adds text content
-    content2.textContent = "i" + i;
+let r=4;
+generate(r);
 
-    // adds actual content
-    container.appendChild(content);
-    container.appendChild(content2);
+function generate(r) {
+  document.querySelectorAll('.break').forEach(a => a.remove());
+  document.querySelectorAll('.flex-container').forEach(a => a.remove());
+  for (let i = 0; i <= (r*r-1); i++) {
 
-  }
-  else {
-    content.classList.add('flex-container');
-    // adds text content
-    content.textContent = "i" + i;
-    // adds actual content
-    container.appendChild(content);
+    // select id
+    const container = document.querySelector('#container');
+    // add element div 
+    const content = document.createElement('div');
+    const content2 = document.createElement('div');
+    // adds class "flex-container"
+    if (i % r == 0) {
+      content.classList.add('break');
+      content2.classList.add('flex-container');
+      // adds text content
+      //content2.textContent = "i" + i;
+
+      // adds actual content
+      container.appendChild(content);
+      container.appendChild(content2);
+
+    }
+    else {
+      content.classList.add('flex-container');
+      // adds text content
+      //content.textContent = "i" + i;
+      // adds actual content
+      container.appendChild(content);
+    }
   }
 }

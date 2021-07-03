@@ -1,14 +1,48 @@
 var s = document.getElementById('s');
-var options = [ 'zero', 'one', 'two' ];
+var options = [ '4', '8', '16' ];
+
 
 options.forEach(function(element, key) {
-  if (element == 'zero') {
-    s[s.options.length] = new Option(element, s.options.length, false, false);
+  console.log(element + 1)
+  if (element == '4') {
+    s[s.options.length] = new Option(element, 4, false, true);
+
   }
-  if (element == 'one') {
-    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
+  if (element == '8') {
+    s[s.options.length] = new Option(element, 8, true, false); // Will add the "selected" attribute
+
   }
-  if (element == 'two') {
-    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+  if (element == '16') {
+    s[s.options.length] = new Option(element, 16, true, false); // Will add the "selected" attribute
   }
 });
+
+r = 4;
+
+document.getElementById('s').addEventListener('change', function (e) {
+  console.log(e.target.value);
+  if (e.target.value == 4) {
+    console.log("adada");
+    r = e.target.value;
+    generate(r);
+  }
+  else if (e.target.value == 8) {
+    console.log("adada");
+    r = e.target.value;
+    generate(r);
+  }
+  else if (e.target.value == 16) {
+    console.log("adada");
+    r = e.target.value;
+    generate(r);
+  }
+  else {
+    console.log("adddddd");
+  }
+})
+
+
+
+
+
+
